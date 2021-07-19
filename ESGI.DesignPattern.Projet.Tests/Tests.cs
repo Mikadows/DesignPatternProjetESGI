@@ -78,6 +78,34 @@ namespace ESGI.DesignPattern.Projet.Tests
             Assert.Null(unknownDescriptor);
         }
         
+        
+        [Fact]
+        public void it_factory_return_defaultdescriptor_with_type_int()
+        {
+            var descriptor = AttributeDescriptorFactory.Create("toto", typeof(int), typeof(int));
+            Assert.IsType<DefaultDescriptor>(descriptor);
+        }
+        
+        [Fact]
+        public void it_factory_return_defaultdescriptor_with_type_datetime()
+        {
+            var descriptor = AttributeDescriptorFactory.Create("toto", typeof(int), typeof(DateTime));
+            Assert.IsType<DefaultDescriptor>(descriptor);
+        }
+        
+        [Fact]
+        public void it_factory_return_referencedescriptor_with_type_user()
+        {
+            var descriptor = AttributeDescriptorFactory.Create("toto", typeof(int), typeof(User));
+            Assert.IsType<ReferenceDescriptor>(descriptor);
+        }
+        
+        [Fact]
+        public void it_factory_throw_exception_with_type_string()
+        {
+            Assert.Throws<Exception>(() => AttributeDescriptorFactory.Create("toto", typeof(int), typeof(String)));
+        }
+        
         [Fact]
         public void it_goldenmaster()
         {
