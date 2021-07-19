@@ -31,26 +31,6 @@ namespace ESGI.DesignPattern.Projet
             return typeof(DescriptorMapper);
         }
     }
-    
-    public class DescriptorMapperWrapper : DescriptorMapper
-    {
-        List<AttributeDescriptor> descriptors;
-
-        public DescriptorMapperWrapper()
-        {
-            descriptors = CreateAttributeDescriptors();
-        }
-
-        public AttributeDescriptor GetMappedDescriptorFor(string descriptorName)
-        {
-            return descriptors.Find(descriptor => descriptor.DescriptorName == descriptorName);
-        }
-
-        public List<AttributeDescriptor> GetAllAttributeDescriptors()
-        {
-            return descriptors;
-        }
-    }
 
     internal class DescriptorData
     {
