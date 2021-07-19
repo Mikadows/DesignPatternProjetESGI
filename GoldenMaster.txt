@@ -1,0 +1,6 @@
+remoteId ESGI.DesignPattern.Projet.DescriptorMapper System.Int32
+createdDate ESGI.DesignPattern.Projet.DescriptorMapper System.DateTime
+lastChangedDate ESGI.DesignPattern.Projet.DescriptorMapper System.DateTime
+createdBy ESGI.DesignPattern.Projet.DescriptorMapper ESGI.DesignPattern.Projet.User
+lastChangedBy ESGI.DesignPattern.Projet.DescriptorMapper ESGI.DesignPattern.Projet.User
+optimisticLockVersion ESGI.DesignPattern.Projet.DescriptorMapper System.Int32

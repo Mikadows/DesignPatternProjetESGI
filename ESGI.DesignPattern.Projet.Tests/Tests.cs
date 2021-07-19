@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using Xunit;
 
 namespace ESGI.DesignPattern.Projet.Tests
@@ -74,6 +76,18 @@ namespace ESGI.DesignPattern.Projet.Tests
                 testDescriptorMapper.GetMappedDescriptorFor("unknown");
 
             Assert.Null(unknownDescriptor);
+        }
+        
+        [Fact]
+        public void it_goldenmaster()
+        {
+            var goldenMaster = File.ReadLines("C:/Users/aymer/Documents/ESGI/4A/Semestre2/DesignPattern/DesignPatternProjetESGI/GoldenMaster.txt").ToArray();
+            var descriptorList = new DescriptorMapperWrapper().GetAllAttributeDescriptors();
+            
+            for (int i = 0; i < goldenMaster.Length; i++)
+            {
+                Assert.Equal(goldenMaster[i], descriptorList[i].ToString());   
+            }
         }
     }
 

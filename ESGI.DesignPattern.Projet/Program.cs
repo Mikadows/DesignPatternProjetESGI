@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace ESGI.DesignPattern.Projet
 {
@@ -6,7 +7,13 @@ namespace ESGI.DesignPattern.Projet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            var descriptorMapperWrapper = new DescriptorMapperWrapper();
+            foreach (var attribute in descriptorMapperWrapper.GetAllAttributeDescriptors())
+            {
+                Console.WriteLine(attribute);
+            }
+           
         }
     }
 }

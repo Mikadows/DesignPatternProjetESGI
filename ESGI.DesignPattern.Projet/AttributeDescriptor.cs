@@ -16,5 +16,10 @@ namespace ESGI.DesignPattern.Projet
         }
 
         public string DescriptorName => descriptorName;
+
+        public override string ToString()
+        {
+            return String.Format("{0} {1} {2}", descriptorName, mapperType, forType);
+        }
     }
 }
